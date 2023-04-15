@@ -1,0 +1,5 @@
+name: NormalAttributeNew
+author: wenr
+api-version: 1.12
+version: '${version}'
+main: com.github.normalattribute.NormalAttributeNew
