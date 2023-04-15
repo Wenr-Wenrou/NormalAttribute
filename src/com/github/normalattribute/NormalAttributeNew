@@ -1,0 +1,31 @@
+package com.github.normalattribute;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public final class NormalAttributeNew extends JavaPlugin {
+
+    private static NormalAttributeNew instance;
+    @Override
+    public void onEnable() {
+        instance = this;
+        // Plugin startup logic
+    }
+
+    @Override
+    public void onDisable() {
+        // Plugin shutdown logic
+    }
+
+    public static NormalAttributeNew getInstance() {
+        return instance;
+    }
+
+    public void loadAttributes() {
+        AttributeAPI attributeAPI = new AttributeAPI();
+        Attribute attack = attributeAPI.createAttribute("攻击力", 1.00);
+        Attribute defense = attributeAPI.createAttribute("防御力", 1.00);
+        Attribute armor = attributeAPI.createAttribute("护甲值", 0.0);
+        Attribute breakArmo = attributeAPI.createAttribute("护甲忽视", 0.0);
+    }
+}
+
